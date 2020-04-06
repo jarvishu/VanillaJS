@@ -6,7 +6,7 @@ const passConfirm = document.getElementById("Confirmation");
 // const formControl = password.parentElement;
 
 function checkRequired(input) {
-  input.forEach(function(item) {
+  input.forEach(function (item) {
     if (item.value.trim() === "") {
       showError(item, `${getCapitalId(item.id)} is required`);
     } else {
@@ -15,6 +15,7 @@ function checkRequired(input) {
   });
 }
 
+//Never Used
 function validateEmail(email) {
   let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
@@ -50,7 +51,7 @@ function checkInput(input, min, max) {
 }
 
 function checkRequired(input) {
-  input.forEach(function(item) {
+  input.forEach(function (item) {
     if (item.value.trim() === "") {
       showError(item, `${getCapitalId(item.id)} is required`);
     } else {
@@ -67,7 +68,7 @@ function checkPasswordMatch(input1, input2) {
   }
 }
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
   checkRequired([username, password, email, passConfirm]);
   checkInput(username, 3, 15);
